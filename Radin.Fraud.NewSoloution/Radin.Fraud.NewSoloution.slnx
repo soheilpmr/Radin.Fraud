@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="BackEndInfrastructure/BackEndInfrastructure.csproj" />
+  <Project Path="MIgration.Identity.SQL/MIgration.Identity.SQL.csproj" />
   <Project Path="Radin.Fraud.Identity/Radin.Fraud.Identity.csproj" />
   <Project Path="Radin.Fraud.NewSoloution.AppHost/Radin.Fraud.NewSoloution.AppHost.csproj" />
   <Project Path="Radin.Fraud.NewSoloution.ServiceDefaults/Radin.Fraud.NewSoloution.ServiceDefaults.csproj" />

@@ -1,4 +1,4 @@
-﻿namespace IDGF.Core
+﻿namespace BackEndInfrastructure.JwtTransformer
 {
     using Microsoft.AspNetCore.OpenApi;
     using Microsoft.OpenApi;

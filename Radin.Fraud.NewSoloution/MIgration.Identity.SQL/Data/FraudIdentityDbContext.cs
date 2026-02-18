@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Radin.Fraud.Identity.Data.Configs;
-using Radin.Fraud.Identity.Data.Entities;
+using FraudIdentity.DB.SQL.Data.Configs;
+using FraudIdentity.DB.SQL.Data.Entities;
+using Microsoft.Extensions.Configuration.Json; // (optional, not strictly required)
 
-namespace Radin.Fraud.Identity.Data
+namespace FraudIdentity.DB.SQL.Data
 {
-	public class FraudIdentityDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
+	// Change the base class to use int as the key type, matching ApplicationRole : IdentityRole<int>
+	public class FraudIdentityDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
 	{
 		private readonly IServiceProvider _serviceProvider;
 		public FraudIdentityDbContext(DbContextOptions<FraudIdentityDbContext> options, IServiceProvider serviceProvider) : base(options)
@@ -20,8 +23,8 @@ namespace Radin.Fraud.Identity.Data
 			_serviceProvider = serviceProvider;
 			this.ChangeTracker.LazyLoadingEnabled = false;
 		}
-		public DbSet<ApplicationUser> Users { get; set; }
-		public DbSet<ApplicationRole> Roles { get; set; }
+		public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+		public DbSet<ApplicationRole> ApplicationRoles { get; set; }
 		public DbSet<ClaimDefinition> ClaimDefinitions { get; set; }
 
 		private static string getConnectionStringSQLServer()
@@ -46,8 +49,7 @@ namespace Radin.Fraud.Identity.Data
 					var connectionStringConfig = scope.ServiceProvider.GetRequiredService<IOptions<ConnectionStringConfig>>().Value;
 					if (connectionStringConfig.SQLServerActivaityStatus == "true")
 					{
-						optionsBuilder.UseSqlServer(connectionString);/*, options =>*/
-						//options.MigrationsAssembly("Migrations.SQL"));
+						optionsBuilder.UseSqlServer(connectionString);
 					}
 				}
 			}

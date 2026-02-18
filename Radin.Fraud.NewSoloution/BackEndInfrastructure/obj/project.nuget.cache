@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SW6xRs0qpP8=",
+  "dgSpecHash": "kGY6L5cQVmQ=",
   "success": true,
   "projectFilePath": "D:\\Hasin\\Fraud-New\\Radin.Fraud\\Radin.Fraud.NewSoloution\\BackEndInfrastructure\\BackEndInfrastructure.csproj",
   "expectedPackageFiles": [
@@ -40,7 +40,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.mvc.razorpages\\2.3.0\\microsoft.aspnetcore.mvc.razorpages.2.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.mvc.taghelpers\\2.3.0\\microsoft.aspnetcore.mvc.taghelpers.2.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.mvc.viewfeatures\\2.3.0\\microsoft.aspnetcore.mvc.viewfeatures.2.3.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.3.0\\microsoft.aspnetcore.razor.2.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor.design\\2.3.0\\microsoft.aspnetcore.razor.design.2.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\2.3.0\\microsoft.aspnetcore.razor.language.2.3.0.nupkg.sha512",

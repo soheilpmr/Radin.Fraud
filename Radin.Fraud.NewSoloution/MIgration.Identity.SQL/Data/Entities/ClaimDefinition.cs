@@ -1,4 +1,4 @@
-﻿namespace Radin.Fraud.Identity.Data.Entities
+﻿namespace FraudIdentity.DB.SQL.Data.Entities
 {
 	public class ClaimDefinition
 	{

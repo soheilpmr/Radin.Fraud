@@ -15,6 +15,18 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+Log.Logger = new LoggerConfiguration()
+	.Enrich.FromLogContext()
+	.Filter.ByExcluding(logEvent =>
+			logEvent.Properties.TryGetValue("RequestPath", out var path) &&
+			(path.ToString().Contains("/metrics") || path.ToString().Contains("/health")))
+	 .WriteTo.Console()
+	.WriteTo.File(
+		"./log/fraaudauthservice/fraaudauthservice-.log",
+		rollingInterval: RollingInterval.Day,
+		shared: true)
+	.CreateLogger();
+
 builder.AddServiceDefaults();
 
 // Add services to the container.
@@ -125,10 +137,6 @@ var app = builder.Build();
 app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
 
 app.MapOpenApi();
 app.MapScalarApiReference("/scalar", options =>

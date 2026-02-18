@@ -20,7 +20,6 @@ builder.AddServiceDefaults();
 // Add services to the container.
 #region Log
 builder.Host.UseSerilog();
-builder.AddServiceDefaults();
 #endregion
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -107,6 +107,9 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 .AddEntityFrameworkStores<FraudIdentityDbContext>()
 .AddDefaultTokenProviders();
 
+// ADD THIS LINE to inject your custom hasher
+builder.Services.AddScoped<IPasswordHasher<ApplicationUser>, LegacyPasswordHasher<ApplicationUser>>();
+
 #region Configure
 builder.Services.Configure<ConnectionStringConfig>(builder.Configuration.GetSection("ConnectionStrings"));
 #endregion
@@ -141,7 +144,7 @@ app.MapDefaultEndpoints();
 app.MapOpenApi();
 app.MapScalarApiReference("/scalar", options =>
 {
-	options.Title = "IDGF Auth API";
+	options.Title = "Radin Fraud Auth API";
 	options.Theme = ScalarTheme.BluePlanet;
 	options.WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient)
 	.AddApiKeyAuthentication("JWT", options => options.Value = "Bearer");

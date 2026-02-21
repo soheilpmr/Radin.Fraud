@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Scripts/LinkServer.sql" />
+    <File Path="Scripts/MigrationFromOldTablesToNewTables2.sql" />
+  </Folder>
   <Project Path="BackEndInfrastructure/BackEndInfrastructure.csproj" />
   <Project Path="MIgration.Identity.SQL/FraudIdentity.DB.SQL.csproj" />
   <Project Path="Radin.Fraud.Identity/Radin.Fraud.Identity.csproj" />

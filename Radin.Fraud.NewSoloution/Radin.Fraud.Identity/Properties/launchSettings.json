@@ -10,7 +10,8 @@
     },
     "https": {
       "commandName": "Project",
-      "launchUrl": "/scalar",
+      "launchUrl": "scalar",
+      "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

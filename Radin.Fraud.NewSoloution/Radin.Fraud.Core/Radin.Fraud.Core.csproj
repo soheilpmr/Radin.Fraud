@@ -30,8 +30,4 @@
     <ProjectReference Include="..\Radin.Fraud.NewSoloution.ServiceDefaults\Radin.Fraud.NewSoloution.ServiceDefaults.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Infrastructure\UnitOfWork\" />
-  </ItemGroup>
-
 </Project>

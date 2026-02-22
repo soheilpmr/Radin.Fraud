@@ -1,0 +1,6 @@
+@Radin.Fraud.Core_HostAddress = http://localhost:5193
+
+GET {{Radin.Fraud.Core_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

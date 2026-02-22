@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Radin.Fraud.Core\Radin.Fraud.Core.csproj" />
     <ProjectReference Include="..\Radin.Fraud.Identity\Radin.Fraud.Identity.csproj" />
   </ItemGroup>
 
